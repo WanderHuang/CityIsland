@@ -1,3 +1,11 @@
+# Begin
+
+```dart
+void main() {
+  print('Hello Dart')
+}
+```
+
 # command
 
 `dart xxx.dart`运行该dart文件

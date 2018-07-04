@@ -2,6 +2,11 @@ import 'dart:core';
 
 /**
  * 一个dart文件类似一个js文件 被其他文件导入时 所有全局变量都可以被引用
+ * - dynamic: 对于不定类型的数据，采用dynamic或者Object描述
+ * - 未初始化的数据(如int a;)都是null，但是int、String上都可以调用对应的方法库
+ * - final 第一次声明时初始化 不可改变
+ * - const 运行时不可改变
+ * - 'My name is $name'
  */
 void main() {
   // base
