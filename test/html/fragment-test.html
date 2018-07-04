@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        // 创建副本
+        const frag = document.createDocumentFragment()
+        
+        // js操作，没有操作文档流
+        const div1 = document.createElement('div')
+        div1.innerText = '123' // node可以设置内容、样式、class等，都是js操作
+        const div2 = document.createElement('div')
+        div2.innerText = '456' // node可以设置内容、样式、class等，都是js操作
+        div1.appendChild(div2) // 仍然没有操作实际文档流
+
+        // 副本添加节点
+        frag.appendChild(div1)
+        frag.appendChild(div2) // 仍然是js操作
+
+        // 一次文档查询操作 耗时
+        let main = document.querySelector('#main') // 整个文档查询，也操作了文档流
+
+        // 一次文档插入操作 耗时
+        main.appendChild(frag) // 只有这里是操作了实际文档的main节点， js需要操作文档流
+
+        div1.style.background = 'red' // 操作了文档流，frag已经没了，div1是实际文档流中的节点
+        
+        const div3 = document.createElement('div')
+        div3.innerText = '789'
+        frag.appendChild(div3) // 无效操作 frag已经被挂载
+    </script>
+</body>
+</html>
