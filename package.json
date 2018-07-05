@@ -1,0 +1,32 @@
+{
+  "name": "CityIsland",
+  "version": "1.0.0",
+  "description": "城市生活最后的孤岛",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WanderHuang/CityIsland.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WanderHuang/CityIsland/issues"
+  },
+  "homepage": "https://github.com/WanderHuang/CityIsland#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
