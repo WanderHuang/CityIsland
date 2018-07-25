@@ -11,3 +11,9 @@
 - git update-index --no-assume-unchanged <filename> 撤销本机的忽略修改文件操作
 
 - git ls-files -v | grep -e "^[hsmrck]"  查看当前被忽略修改的文件列表
+
+- git log <branchA>..<branchB> 查看branchB比branchA多出的commits:如需要检测本地分支比远程分支多了几个提交，则 `git log origin/master..master` 这时会列出本地多出的内容
+
+- git log <branchA> ^<branchB> 查看branchA中有，但branchB中没有的内容
+
+- git log --left-right dev...master 列出`dev`和`master`这两个分支的差异，`<`=`dev`    `>`=`master`
