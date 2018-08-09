@@ -7,3 +7,7 @@
 * pics： 文章图片
 * articles： 关于技术、生活、哲理的文章
 * test：技术测试文件
+
+## deepin
+
+- deepin是国人做的一款基于debian的linux系统
