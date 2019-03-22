@@ -17,3 +17,5 @@
 - git log <branchA> ^<branchB> 查看branchA中有，但branchB中没有的内容
 
 - git log --left-right dev...master 列出`dev`和`master`这两个分支的差异，`<`=`dev`    `>`=`master`
+
+- git cherry-pick <commit> 只合并某一个commit到当前分支
